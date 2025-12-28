@@ -1,14 +1,27 @@
+# workflow name
 name: Github Actions Run
 
+#Event (invoking point)
 on:
   push:
-    branchs:
+    branches:
       - main
 
+#하나의 workflow는 1개 이상의 job으로 구성된다
+#Executed Parellaley
 jobs:
+  #Job Id
   My-Deploy-Job:
+    # Runs on which OS
     runs-on: ubuntu-latest
-
+    
+    #Steps : steps are individual tasks within a job that are 
+              #executed sequentially on the same runner machine
     steps:  
       - name: Print Hellow World
         run: echo "Hello World"
+
+      - name: Other commands
+        run: |
+          echo "Good"
+          echo "Morning"
