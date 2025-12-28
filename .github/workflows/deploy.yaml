@@ -1,0 +1,14 @@
+name: Github Actions Run
+
+on:
+  push:
+    branchs:
+      - main
+
+jobs:
+  My-Deploy-Job:
+    runs-on: ubuntu-latest
+
+    steps:  
+      - name: Print Hellow World
+        run: echo "Hello World"
