@@ -25,3 +25,8 @@ jobs:
         run: |
           echo "Good"
           echo "Morning"
+
+      - name: Use Github Actions Internal Variables
+        run: |
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
